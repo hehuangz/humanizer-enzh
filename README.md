@@ -102,6 +102,19 @@ Dig into the details—especially the parts that aren't obvious.
 这样就能把应用部署上去了。
 ```
 
+## Comparison with similar projects
+
+| Project | Language | Type | Description |
+|---|---|---|---|
+| [blader/humanizer](https://github.com/blader/humanizer) | English | Claude Code Skill | The original humanizer skill, 13k+ stars. English patterns only |
+| [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh) | 简体中文 | Claude Code Skill | Most popular Chinese version, 6k+ stars. Chinese patterns only |
+| [kevintsai1202/Humanizer-zh-TW](https://github.com/kevintsai1202/Humanizer-zh-TW) | 繁體中文 | Claude Code Skill | Traditional Chinese (Taiwan) version |
+| [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) | English | Claude Code Skill | English audit skill with rewrite |
+| [voidborne-d/humanize-chinese](https://github.com/voidborne-d/humanize-chinese) | 中文 | Python Tool | Standalone tool with N-gram perplexity analysis |
+| **humanizer-enzh** (this project) | **English + 中文** | **Claude Code Skill** | **Bilingual: auto-detects language and applies language-specific rules** |
+
+Existing projects are split by language — English or Chinese, not both. This project combines both into a single skill with automatic language detection, so you don't need to install separate skills for each language.
+
 ## Credits
 
 - English patterns based on [blader/humanizer](https://github.com/blader/humanizer) (MIT License) and [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
