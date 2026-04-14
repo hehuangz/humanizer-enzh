@@ -2,6 +2,8 @@
 
 A Claude Code skill that removes signs of AI-generated writing from text in both English and Chinese.
 
+一个 Claude Code skill，用于去除英文和中文文本中的 AI 生成痕迹。英文检测基于 Wikipedia 的「[Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)」指南（源自 [blader/humanizer](https://github.com/blader/humanizer)）；中文检测基于技术文档和商业写作中常见的 AI 写作模式分析。
+
 English detection is based on Wikipedia's "[Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)" guide (via [blader/humanizer](https://github.com/blader/humanizer)). Chinese detection is based on common AI patterns in technical and business writing.
 
 ## What it detects and fixes
@@ -24,14 +26,18 @@ English detection is based on Wikipedia's "[Signs of AI writing](https://en.wiki
 
 ### Claude Code
 
+Global install (available in all projects):
+
 ```bash
-claude skill add --from /path/to/humanizer-enzh/SKILL.md
+mkdir -p ~/.claude/skills/humanizer-enzh
+cp SKILL.md ~/.claude/skills/humanizer-enzh/SKILL.md
 ```
 
-Or copy `SKILL.md` to your Claude Code skills directory:
+Project-level install (only available in current project):
 
 ```bash
-cp SKILL.md ~/.claude/skills/humanizer-enzh/SKILL.md
+mkdir -p .claude/skills/humanizer-enzh
+cp SKILL.md .claude/skills/humanizer-enzh/SKILL.md
 ```
 
 ### OpenCode
